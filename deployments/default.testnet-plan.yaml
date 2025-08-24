@@ -1,0 +1,18 @@
+---
+id: 0
+name: Testnet deployment
+network: testnet
+stacks-node: "https://api.testnet.hiro.so"
+bitcoin-node: "http://blockstack:blockstacksystem@bitcoind.testnet.stacks.co:18332"
+plan:
+  batches:
+    - id: 0
+      transactions:
+        - contract-publish:
+            contract-name: temperaturecontrol
+            expected-sender: ST3SMR1P41DM4KEM40EH7H8CM4XFA7PEYCT3NZF4
+            cost: 84080
+            path: contracts/temperaturecontrol.clar
+            anchor-block-only: true
+            clarity-version: 3
+      epoch: "3.2"
